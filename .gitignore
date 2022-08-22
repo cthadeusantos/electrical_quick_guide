@@ -1,0 +1,14 @@
+main.aux
+main.bbl
+main.lof
+main.log
+main.lot
+main.out
+main.toc
+main.blg
+main.pdf
+main.synctex.gz
+README.txt
+*.log
+
+workspace/
