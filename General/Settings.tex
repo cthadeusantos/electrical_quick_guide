@@ -16,7 +16,7 @@ CPO/COGIC/FIOCRUZ $\copyright$ 2022
 % Insert authors and student numbers here
 \newcommand\reportauthors{
 Ilarindo, Jefferson & Eng. Eletricista \\
-Martinelli, Marcus & Téc. em Química\\
+Martinelli, Marcus & Téc. em Eletrônica\\
 Mil-Homens, Floriano & Eng. Eletricista\\
 Nascimento, Simaia & Eng. Eletricista \\
 Santos, Carlos & Eng. Eletricista \\
@@ -94,3 +94,19 @@ Rio de Janeiro, \today
 
 % Limits the ToC to sections and subsections (no subsubsec.)
 \setcounter{tocdepth}{2}
+
+
+%
+%
+% Adicionadas pelo THADEU
+% Com o intuito de adicionar uma 4 sub secao
+%https://tex.stackexchange.com/questions/60209/how-to-add-an-extra-level-of-sections-with-headings-below-subsubsection
+%
+\setcounter{secnumdepth}{4}
+
+\titleformat{\paragraph}
+{\sffamily\bfseries\color{Tue-red}}{\theparagraph\enskip\color{gray}\textbar\enskip}{0cm}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+%%%%%%%%% FIM DOS PACOTES ADICIONADOS
