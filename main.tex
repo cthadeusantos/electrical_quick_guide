@@ -2,107 +2,90 @@
 \input{General/Preamble} % Loads in the preamble 
 \input{General/Settings} % Loads in user defined settings
 
-
 \begin{document}
+	
+	% Inserts the front page
+	\input{Chapters/0. Frontpage}
+	\newpage
+	
+	% Inserts a blank page with stamp
+	\clearpage
+	\thispagestyle{empty}
+	\vspace*{0.25\textheight}
+	\begin{center}
+		\begin{turn}{45}
+			\bfseries\fontsize{60pt}{60pt}\selectfont \color{red}Blank page
+		\end{turn}
+	\end{center}
+	\clearpage
+	
+	% Generates a ToC without page number
+	{\hypersetup{linkcolor=black} % Keeps the ToC black even with non-black linkcolor
+	\tableofcontents\thispagestyle{empty}}
+	\newpage
+	
+	\pagenumbering{roman}
+	
+	% Generates a ToC without pagenumber
+	{\listoffigures\thispagestyle{empty}}
+	{\listoftables\thispagestyle{empty}}
+	\newpage
+	%\pagenumbering{arabic}
+	
+	% contains inspiration for formatting tables, images, text citations etc.
+	%\input{Chapters/Z. Template} % Feel free to remove / comment out
+	%\newpage
+	
+	% Generates a list of symbols table
+	\input{Chapters/0. List of symbols}
+	\newpage
+	
+	% Generates a list of abbreviations
+	\input{Chapters/0. List of abbreviations}
+	\newpage
+	
+	\pagenumbering{arabic}
+	
+	% Creates the introduction, starting page numbering
+	\input{Chapters/1. Introduction}
+	\newpage
+	
+	% Copy this to add more chapters
+	\input{Chapters/2. General settings}
+	\newpage
+	
+	% Copy this to add more chapters
+	\input{Chapters/3. BT}
+	\newpage	
+	
+	% Copy this to add more chapters
+	\input{Chapters/9. SPDA-ATT}
+	\newpage
+	
+	% Copy this to add more chapters
+	\input{Chapters/30. MT}
+	\newpage
+	
+	% Copy this to add more chapters
+	\input{Chapters/50. Etapas}
+	\newpage
+	
+	% Creates references using the Biblatex 
+	\bibliographystyle{plain}
+	\bibliography{General/References.bib}
+	\newpage
 
-% Inserts the front page
-\input{Chapters/0. Frontpage}
-\newpage
+	\appendix % Any section after this command will have a letter as an index
 
-% Inserts a blank page with stamp
-\clearpage
-\thispagestyle{empty}
-\vspace*{0.25\textheight}
-\begin{center}
-	\begin{turn}{45}
-		\bfseries\fontsize{60pt}{60pt}\selectfont \color{red}Blank page
-	\end{turn}
-\end{center}
-\clearpage
-
-% Generates a ToC without page number
-{\hypersetup{linkcolor=black} % Keeps the ToC black even with non-black linkcolor
-\tableofcontents\thispagestyle{empty}}
-\newpage
-
-\pagenumbering{roman}
-
-% Generates a ToC without pagenumber
-{\listoffigures\thispagestyle{empty}}
-{\listoftables\thispagestyle{empty}}
-\newpage
-%\pagenumbering{arabic}
-
-% contains inspiration for formatting tables, images, text citations etc.
-%\input{Chapters/Z. Template} % Feel free to remove / comment out
-%\newpage
-
-% Generates a list of symbols table
-\input{Chapters/0. List of symbols}
-\newpage
-
-% Generates a list of abbreviations
-\input{Chapters/0. List of abbreviations}
-\newpage
-
-\pagenumbering{arabic}
-
-% Creates the introduction, starting page numbering
-\input{Chapters/1. Introduction}
-\newpage
-
-% Copy this to add more chapters
-\input{Chapters/2. General settings}
-\newpage
-
-% Copy this to add more chapters
-\input{Chapters/3. Referencias tecnicas}
-
-% Copy this to add more chapters
-\input{Chapters/4. Iluminacao}
-\newpage
-
-% Copy this to add more chapters
-\input{Chapters/5. Tomadas}
-\newpage
-
-% Copy this to add more chapters
-\input{Chapters/6. Quadros}
-\newpage
-
-% Copy this to add more chapters
-\input{Chapters/7. Nobreaks}
-\newpage
-
-% Copy this to add more chapters
-\input{Chapters/8. Encaminhamento}
-\newpage
-
-% Copy this to add more chapters
-\input{Chapters/9. SPDA-ATT}
-\newpage
-
-% Copy this to add more chapters
-\input{Chapters/30. MT}
-\newpage
-
-% Copy this to add more chapters
-\input{Chapters/50. Etapas}
-\newpage
-
-% Creates references using the Biblatex 
-\bibliographystyle{plain}
-\bibliography{General/References.bib}
-\newpage
-
-\appendix % Any section after this command will have a letter as an index
-
-% Adds an appendix entry
-\input{Appendix/A. Appendix A}
-\newpage
-
-% Adds an appendix entry
-\input{Appendix/B. Appendix B - Detalhes}
-\newpage
+	% Adds an appendix entry
+	\input{Appendix/0. Appendix}
+	\newpage
+	
+	\appendix % Any section after this command will have a letter as an index
+	
+	% Adds an appendix entry
+	\input{Attachment/0. Attachment}
+	\newpage
+	
 
 \end{document}
