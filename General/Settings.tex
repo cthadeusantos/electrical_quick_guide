@@ -90,7 +90,10 @@ Rio de Janeiro, \today
 \usepackage{mlmodern}
 
 % Removes indent when starting a new paragraph
-\setlength\parindent{0pt}
+%\setlength\parindent{0pt}
+% EU COMENTEI A LINHA ACIMA E ADICIONAEI A ABAIXO
+\setlength\parskip{0.2em plus 0.1em minus 0.2em}
+
 
 % Limits the ToC to sections and subsections (no subsubsec.)
 \setcounter{tocdepth}{2}
@@ -105,8 +108,20 @@ Rio de Janeiro, \today
 
 \titleformat{\paragraph}
 {\sffamily\bfseries\color{Tue-red}}{\theparagraph\enskip\color{gray}\textbar\enskip}{0cm}{}
-\titlespacing*{\paragraph}
-{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
-
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
 %%%%%%%%% FIM DOS PACOTES ADICIONADOS
+%https://tex.stackexchange.com/questions/140509/how-to-create-an-alert-box-with-a-figure-to-the-left
+\definecolor{warningbackground}{RGB}{252,226,158}
+\newcommand{\alertwarningbox}[1]{
+	%\centering
+	\colorbox{warningbackground}{\parbox{350pt} {
+			\vskip 10pt
+			\begin{floatingfigure}[l]{30pt}
+				\includegraphics[scale=.3]{Figures/1. Others/exclamation_warning_15590.png}
+			\end{floatingfigure}
+			#1
+			\vskip 10pt
+		}
+	}
+}
